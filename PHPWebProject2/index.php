@@ -1,5 +1,5 @@
 <?php
 
-echo "Ubytovanie";
+echo "Ubytovanie C-blok";
 
-?>P
+?>
