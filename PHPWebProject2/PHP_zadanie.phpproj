@@ -18,5 +18,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="index.php" />
+    <Compile Include="pages\connect.php" />
+    <Compile Include="pages\footer.php" />
+    <Compile Include="pages\header.php" />
+    <Compile Include="pages\kontakt.php" />
+    <Compile Include="pages\novinky.php" />
+    <Compile Include="pages\mail.php" />
+    <Compile Include="pages\ziadost.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
 </Project>
