@@ -35,8 +35,8 @@ if(isset($_POST['submit'])){
     $vzdialenost=(int) $_POST['vzdialenost'];
     $priemer=tofloat($_POST['priemer']);
     $poznamky=mysqli_real_escape_string($conn,$_POST['poznamky']);
-    $sql = "INSERT INTO formular (meno, priezvisko, rc, datumnarodenia, mobil, email, pohlavie, rocnik, vzdialenost, priemer, poznamky)
-VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$email}','{$pohlavie}','{$rocnik}',{$vzdialenost},{$priemer},'{$poznamky}')";
+    $sql = "INSERT INTO formular (meno, priezvisko, rc, datumnarodenia, mobil, email, pohlavie, rocnik, fakulta, vzdialenost, priemer, poznamky)
+VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$email}','{$pohlavie}','{$rocnik}','{$rocnik}',{$vzdialenost},{$priemer},'{$poznamky}')";
     echo "<pre>" . $sql . "</pre>";
     $result = $conn->query($sql);
     if(!$result) echo mysqli_error($conn);
@@ -44,7 +44,9 @@ VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$emai
 }
 
 ?>
-
+<br>
+<h1>Pre registrovanie je potrebné vyplniť žiadosť </h1>
+<br>
 <form action="#" method="post" name="form">
     <div class="row">
         <div class="col">
@@ -143,84 +145,13 @@ VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$emai
         <div class="col">
             <div class="form-group">
                 <label for="poznamky">Poznámka</label>
-                <input type="text" name="poznamky" class="form-control" id="formGroupExampleInput" placeholder="Poznámka">
+                <textarea type="text" name="poznamky" class="form-control" id="exampleFormControlTextarea1" placeholder="Poznámka" rows="3"></textarea>
                 <br>
 
             </div>
         </div>
     </div>
-    <input type="submit" name="submit" value="Odoslať" class="sub-btn" />
+    <input type="submit" name="submit" value="Odoslať" class="btn btn-primary" />
 </form>
-
-
-
-
-
-
-
-
-
-<form action="#" method="post" name="form" class="form-box">
-
-    <label for="meno">Meno :</label>
-    <input type="text" name="meno" class="inp" placeholder="Napíšte svoje Meno" required><br>
-    <br>
-
-    <label for="priezvisko"> Priezvisko :</label>
-    <input type="text" name="priezvisko" class="inp" placeholder="Napíšte svoje Priezvisko" required><br>
-    <br>
-
-    <label for="rc">Rodné číslo :</label>
-    <input type="text" name="rc" class="inp" placeholder="Napíšte svoje Rodné čislo" required><br>
-    <br>
-
-    <label for="datumnarodenia">Dátum narodenia :</label>
-    <input type="date" name="datumnarodenia" class="inp" placeholder="Napíšte svoj Dátum narodenia " required><br>
-    <br>
-
-    <label for="mobil">Mobil :</label>
-    <input type="text" name="mobil" class="inp" placeholder="Napíšte svoj mobil " required><br>
-    <br>
-
-    <label for="email">Email :</label>
-    <input type="text" name="email" class="inp" placeholder="Napíšte svoj email " required><br>
-    <br>
-
-    <label for="pohlavie">Pohlavie :</label>
-    <select name="pohlavie" id="pohavie" class="inp" required>
-        <option disabled>Vyberte svoje pohlavie</option>
-        <option value="muz">Muž</option>
-        <option value="zena">Žena</option>
-    </select><br />
-    <br>
-
-    <label for="rocnik">Ročník :</label>
-    <input type="text" name="rocnik" class="inp" placeholder="Napíšte svoj " required><br>
-    <br>
-
-    <label for=" ">Fakulta :</label>
-    <select name="fakulta" id="fakulta" class="inp" required>
-        <option disabled>Vyberte svoju fakultu:</option>
-        <option value="pf">Pedagogická fakulta</option>
-        <option value="ff">Filozofická fakulta</option>
-        <option value="tf">Teologická fakulta</option>
-        <option value="fz">Zdravotnícka fakulta</option>
-    </select><br />
-    <br>
-
-    <label for="vzdialenost"> Vzdialenosť v KM :</label>
-    <input type="text" name="vzdialenost" class="inp" placeholder="Napíšte svoje " required><br>
-    <br>
-
-    <label for="priemer">Priemer :</label>
-    <input type="text" name="priemer" class="inp" placeholder="Napíšte svoje " required><br>
-    <br>
-
-    <label for="poznamky">Poznámka :</label><br>
-    <textarea name="msg" class="sub-btn" placeholder="Napíšte svoju Správu" required></textarea>
-    <br>
-    <input type="submit" name="submit" value="Odoslať" class="sub-btn" />
-</form>
-
 
 <?php include 'footer.php';?>

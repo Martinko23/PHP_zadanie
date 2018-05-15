@@ -4,15 +4,18 @@ $aktivna = "novinky";
 include 'header.php';
 ?>
 
-
+<br />
+<h1>Poradie uchádzačov o ubytovanie C-Blok </h1>
+<br />
 
 <?php
+
 /* change character set to utf8 */
 if (!$conn->set_charset("utf8")) {
 printf("Error loading character set utf8: %s\n", $conn->error);
 exit();
 }
-$sql = "SELECT id, rocnik, fakulta, created, (vzdialenost / priemer) AS skore FROM formular ORDER BY skore DESC, created ASC";
+$sql = "SELECT id, rocnik, fakulta, created, floor(vzdialenost / priemer) AS skore FROM formular ORDER BY skore DESC, created ASC";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 ?>
@@ -31,7 +34,7 @@ if ($result->num_rows > 0) {
     $i=1;
         while($row = $result->fetch_assoc()) {
         ?>
-        <tr class="<?=$i < 3 ? 'table-success' : ''?>">
+        <tr class="<?=$i < 11 ? 'table-success' : ''?>">
             <th scope="row">
                 <?=$i++?></th>
             <td><?=$row["id"] ?></td>
