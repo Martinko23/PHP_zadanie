@@ -1,6 +1,5 @@
 <?php 
     include 'connect.php';
-
 ?>
 
 <!doctype html>
@@ -28,7 +27,7 @@
     <nav class="nav nav-pills nav-fill" style="padding-bottom: 3em;">
         <a class="nav-item nav-link<?=$aktivna==="domov" ? " active" : ""?>" href="\index.php">Domov</a>
         <a class="nav-item nav-link<?=$aktivna==="ziadost" ? " active" : ""?>" href="\ziadost.php">Žiadosť o ubytovanie</a>
-        <a class="nav-item nav-link<?=$aktivna==="novinky" ? " active" : ""?>" href="\novinky.php">Poradie uchádzačov</a>
+        <a class="nav-item nav-link<?=$aktivna==="vysledky" ? " active" : ""?>" href="\vysledky.php">Poradie uchádzačov</a>
         <a class="nav-item nav-link<?=$aktivna==="kontakt" ? " active" : ""?>" href="\kontakt.php">Kontakt</a>
     </nav>
     

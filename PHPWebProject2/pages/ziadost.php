@@ -36,8 +36,8 @@ if(isset($_POST['submit'])){
     $priemer=tofloat($_POST['priemer']);
     $poznamky=mysqli_real_escape_string($conn,$_POST['poznamky']);
     $sql = "INSERT INTO formular (meno, priezvisko, rc, datumnarodenia, mobil, email, pohlavie, rocnik, fakulta, vzdialenost, priemer, poznamky)
-VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$email}','{$pohlavie}','{$rocnik}','{$rocnik}',{$vzdialenost},{$priemer},'{$poznamky}')";
-    echo "<pre>" . $sql . "</pre>";
+VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$email}','{$pohlavie}','{$rocnik}','{$fakulta}',{$vzdialenost},{$priemer},'{$poznamky}')";
+    //echo "<pre>" . $sql . "</pre>";
     $result = $conn->query($sql);
     if(!$result) echo mysqli_error($conn);
     echo "Zapíšte si svoj ID kód : " .$conn->insert_id. "<br />";

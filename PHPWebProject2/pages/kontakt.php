@@ -4,27 +4,29 @@ $aktivna = "kontakt";
 include 'header.php';
 ?>
 
-<h3>Adresa:</h3>
+<h2>Kontaktné údaje</h2>
+<br>
+<h4>Adresa:</h4>
 Katolícka univerzita v Ružomberku
 <br>Ubytovacie a stravovacie zariadenia
 <br>Hrabovská cesta 1/A
 <br>034 01 Ružomberok
 <br>
-<br><h3>Telefón:</h3>
+<br><h4>Telefón:</h4>
 telefón: +421 44 430 46 93
 <br>
-<br><h3>Email:</h3>
-email: ubytovanie/zavinac/ku.sk
+<br><h4>Email:</h4>
+email: ubytovanie@ku.sk
 <br>
-<br><h3>Úradné hodiny:</h3>
+<br><h4>Úradné hodiny:</h4>
 Utorok:  7:00 - 11:00 a 12:00 - 13:30 hod. Hrabovská cesta 1/A
 <br>Štvrtok: 7:00 - 11:00 a 12:00 - 13:30 hod. Hrabovská cesta 1/A
 <br>
-<br><h3>Riaditeľka:</h3>
+<br><h4>Riaditeľka:</h4>
 Mgr. Renáta Šrámeková
     <br>email: renata.sramekova@ku.sk
 <br>
-<br><h3>Samostatný referent:</h3>
+<br><h5>Samostatný referent:</h5>
 Martin Piatko
     <br>email: martin.piatko@ku.sk
 <br>
@@ -61,7 +63,7 @@ mail($to, $subject, $message, $headers);
         <div class="col">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" name="email" class="form-control" id="formGroupExampleInput" placeholder="Správa pre podporu">
+                <input type="text" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email">
             </div>
         </div>
     </div>
@@ -75,8 +77,8 @@ mail($to, $subject, $message, $headers);
         </div>
         <div class="col">
             <div class="form-group">
-                <label for="message">Poznámka</label>
-                <textarea type="text" name="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Poznámka" rows="3"></textarea>
+                <label for="message">Správa</label>
+                <textarea type="text" name="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Správa" rows="3"></textarea>
                 <br>
             </div>
         </div>

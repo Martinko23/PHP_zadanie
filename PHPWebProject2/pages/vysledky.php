@@ -1,6 +1,6 @@
 <?php
-$nadpis = "Novinky";
-$aktivna = "novinky";
+$nadpis = "Vysledky";
+$aktivna = "vysledky";
 include 'header.php';
 ?>
 

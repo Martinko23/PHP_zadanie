@@ -52,13 +52,13 @@ VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$emai
         <div class="col">
             <div class="form-group">
                 <label for="meno">Meno</label>
-                <input type="text" name="meno" class="form-control" id="formGroupExampleInput" placeholder="Meno">
+                <input type="text" name="meno" class="form-control" id="meno" placeholder="Meno">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
                 <label for="priezvisko">Priezvisko</label>
-                <input type="text" name="priezvisko" class="form-control" id="formGroupExampleInput" placeholder="Priezvisko">
+                <input type="text" name="priezvisko" class="form-control" id="meno" placeholder="Priezvisko">
             </div>
         </div>
     </div>
@@ -68,13 +68,13 @@ VALUES ('{$meno}','{$priezvisko}','{$rc}','{$datumnarodenia}','{$mobil}','{$emai
         <div class="col">
             <div class="form-group">
                 <label for="rc">Rodné číslo</label>
-                <input type="text" name="rc" class="form-control" id="formGroupExampleInput" placeholder="Rodné číslo">
+                <input type="text" name="rc" class="form-control" id="rc" placeholder="Rodné číslo">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
                 <label for="datumnarodenia">Dátum narodenia</label>
-                <input type="date" name="datumnarodenia" class="form-control" id="formGroupExampleInput" placeholder="Dátum narodenia">
+                <input type="date" name="datumnarodenia" class="form-control" id="datumnarodenia" placeholder="Dátum narodenia">
             </div>
         </div>
     </div>

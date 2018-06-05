@@ -57,13 +57,13 @@ mail($to, $subject, $message, $headers);
         <div class="col">
             <div class="form-group">
                 <label for="mane">Meno</label>
-                <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Meno">
+                <input type="text" name="name" class="form-control" id="meno" placeholder="Meno">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email">
+                <input type="text" name="email" class="form-control" id="email" placeholder="Email">
             </div>
         </div>
     </div>
@@ -72,16 +72,17 @@ mail($to, $subject, $message, $headers);
         <div class="col">
             <div class="form-group">
                 <label for="phone">Mobil</label>
-                <input type="text" name="phone" class="form-control" id="formGroupExampleInput" placeholder="Mobil">
+                <input type="text" name="phone" class="form-control" id="mobil" placeholder="Mobil">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
                 <label for="message">Správa</label>
-                <textarea type="text" name="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Správa" rows="3"></textarea>
+                <textarea type="text" name="msg" class="form-control" id="msg" placeholder="Správa" rows="3"></textarea>
                 <br>
             </div>
         </div>
     </div>
     <input type="submit" name="submit" value="Odoslať" class="btn btn-primary" />
-</form><?php include 'footer.php';?>
+</form>
+<?php include 'footer.php';?>
